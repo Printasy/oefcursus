@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smoke test</title>
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+
+<main class="container py-4 my-3">
+    <h1 class="h4 mb-3">Vite + Bootstrap werkt</h1>
+
+    <!-- Eerste test -->
+    <div class="card shadow-sm mb-3">
+        <div class="card-header bg-primary text-white">Test</div>
+        <div class="card-body">
+            <p class="mb-3">Klik op de knop om te testen of alles goed geladen is.</p>
+            <button id="btnTest" class="btn btn-primary">Test template</button>
+
+            <div id="out" class="alert alert-secondary mt-3 mb-0">
+                Output verschijnt hier
+            </div>
+        </div>
+    </div>
+
+    <!-- Naam test -->
+    <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">Naam test</div>
+        <div class="card-body">
+            <p class="mb-3">Vul je naam in en klik op submit.</p>
+
+            <form id="naamForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="inpNaam" placeholder="Tik je naam hier in">
+                </div>
+                <button id="btnNaam" type="button" class="btn btn-primary">Submit</button>
+            </form>
+
+            <div id="outpNaam" class="alert alert-secondary mt-3 mb-0">
+                Output verschijnt hier
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">Hoofdstuk 2: Functions - naam invullen & bevestigen</div>
+        <div class="card-body">
+            <label class="form-label">Wat is je naam?</label>
+            <input id="fn_nameInput" class="form-control mb-2" placeholder="vb. Tom">
+            <button id="fn_btnGreet" class="btn btn-primary w-100">Groet</button>
+            <div id="fn_output" class="alert alert-secondary mt-3 mb-0">
+                Resultaat komt hier…
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">Hoofdstuk 2: Functions - bereken vierkant getal</div>
+        <div class="card-body">
+            <label class="form-label">Geef een getal in?</label>
+            <input type="number" id="inputGetal" class="form-control mb-2">
+            <button id="btnBereken" class="btn btn-primary w-100">Bereken kwadraat</button>
+            <div id="toonKwadraat" class="alert alert-secondary mt-3 mb-0">
+                Resultaat komt hier…
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">Hoofdstuk 3: Function
+            Scoping</div>
+        <div class="card-body">
+            <button id="sc_btn" class="btn btn-primary w-100 mb-2">Voer scope demo
+                uit</button>
+            <div id="sc_output" class="alert alert-secondary mb-0">
+                Klik op de knop om scope te testen…
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">Hoofdstuk 3: Function
+            Scoping - mini opdracht geheim bericht</div>
+        <div class="card-body">
+            <button id="secret_btn" class="btn btn-primary w-100 mb-2">Toon geheim bericht</button>
+            <div id="secret_output" class="alert alert-secondary mb-0">
+                Klik op de knop om geheim bericht te tonen
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-secondary text-white">
+            Hoofdstuk 4: Named Functions
+        </div>
+        <div class="card-body">
+            <label class="form-label">Typ een primaire kleur (rood of blauw):</label>
+            <input id="nf_input" class="form-control mb-2" placeholder="bv. rood">
+            <button id="nf_btn" class="btn btn-secondary w-100 mb-2">Toon
+                kleur</button>
+            <div id="nf_text" class="alert alert-secondary mb-2">
+                Wacht op input…
+            </div>
+            <div id="nf_box"
+                 class="d-flex justify-content-center align-items-center fw-bold"
+                 style="height: 70px; border-radius: 6px; border: 1px solid #ccc;
+background:#f8f9fa;">
+                Geen kleur
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-warning">Mini-opdracht: Fruit kiezer</div>
+        <div class="card-body">
+            <input id="fr_input" class="form-control mb-2" placeholder="bv. appel">
+            <button id="fr_btn" class="btn btn-warning w-100 mb-2">Kies
+                fruit</button>
+            <div id="fr_text" class="alert alert-secondary mb-2">Wacht op
+                input…</div>
+            <div id="fr_box"
+                 class="d-flex justify-content-center align-items-center fw-bold"
+                 style="height:70px; border:1px solid #ccc; border-radius:6px;
+background:#f8f9fa;">
+                ❓
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-info text-white">
+            Hoofdstuk 5: Template Literals
+        </div>
+        <div class="card-body">
+            <label class="form-label">Naam:</label>
+            <input id="tl_name" class="form-control mb-2" placeholder="bv. Tom">
+            <label class="form-label">Leeftijd:</label>
+            <input id="tl_age" type="number" class="form-control mb-2"
+                   placeholder="bv. 25">
+            <button id="tl_btn" class="btn btn-info w-100 mb-2">Maak
+                welkomstbericht</button>
+            <div id="tl_output" class="alert alert-secondary mb-0">
+                Wacht op input…
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht:
+            Profielkaart</div>
+        <div class="card-body">
+            <input id="pf_name" class="form-control mb-2" placeholder="Naam">
+            <input id="pf_city" class="form-control mb-2" placeholder="Stad">
+            <input id="pf_hobby" class="form-control mb-2" placeholder="Hobby">
+            <button id="pf_btn" class="btn btn-dark w-100 mb-2">Maak profiel</button>
+            <div id="pf_out" class="alert alert-secondary mb-0">
+                Wacht op input…
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-success text-white">
+            Hoofdstuk 6: Arrow Functions
+        </div>
+        <div class="card-body">
+            <label class="form-label">Getal 1:</label>
+            <input id="af_nummer1" type="number" class="form-control mb-2"
+                   placeholder="vb. 5">
+            <label class="form-label">Getal 2:</label>
+            <input id="af_nummer2" type="number" class="form-control mb-2"
+                   placeholder="vb. 7">
+            <button id="af_btn" class="btn btn-success w-100 mb-2">Tel op</button>
+            <div id="af_out" class="alert alert-secondary mb-0">
+                Wacht op input…
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Even
+            checker</div>
+        <div class="card-body">
+            <input id="ev_input" type="number" class="form-control mb-2"
+                   placeholder="vb. 6">
+            <button id="ev_btn" class="btn btn-dark w-100 mb-2">Controleer</button>
+            <div id="ev_out" class="alert alert-secondary mb-0">
+                Wacht op input…
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">
+            Hoofdstuk 7: Arrays
+        </div>
+        <div class="card-body">
+            <label class="form-label">Voeg een naam toe:</label>
+            <input id="arr_name" class="form-control mb-2" placeholder="bv. Lisa">
+            <button id="arr_btn" class="btn btn-primary w-100 mb-2">Voeg toe</button>
+            <div class="alert alert-info mb-2">
+                Totaal namen: <span id="arr_count">0</span>
+            </div>
+            <ul id="arr_list" class="list-group"></ul>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Takenlijst</div>
+        <div class="card-body">
+            <input id="todo_input" class="form-control mb-2" placeholder="Nieuwe
+taak">
+            <button id="todo_btn" class="btn btn-dark w-100 mb-2">Voeg toe</button>
+            <div class="d-flex justify-content-end"> <span class="badge text-bg-secondary m-3 " id="todo_count">Aantal taken : 0</span> </div>
+
+            <ul id="todo_list" class="list-group">
+            </ul>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-info text-white">
+            Hoofdstuk 8: DOM Root Nodes
+        </div>
+        <div class="card-body">
+            <button id="rn_btnMessage" class="btn btn-info w-100 mb-2">Zet bericht in
+                body</button>
+            <button id="rn_btnColor" class="btn btn-dark w-100 mb-2">Verander
+                achtergrond</button>
+            <div id="rn_output" class="alert alert-secondary mb-0">
+                Wacht op actie…
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Dark Mode</div>
+        <div class="card-body">
+            <button id="dm_on" class="btn btn-dark w-100 mb-2">Dark mode 🌙</button>
+            <button id="dm_off" class="btn btn-light w-100 mb-2">Light mode
+                ☀️</button>
+            <div id="dm_status" class="alert alert-secondary mb-0">Wacht op
+                actie…</div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">
+            Hoofdstuk 9: Output Methodes
+        </div>
+        <div class="card-body">
+            <button id="om_console" class="btn btn-outline-primary w-100 mb-2">
+                Console Log
+            </button>
+            <button id="om_alert" class="btn btn-outline-warning w-100 mb-2">
+                Alert Meldingsvenster
+            </button>
+            <button id="om_ui" class="btn btn-outline-success w-100 mb-2">
+                Toon in pagina
+            </button>
+            <div id="om_output" class="alert alert-secondary mb-0">
+                Output wordt hier zichtbaar…
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Output All</div>
+        <div class="card-body">
+            <input id="on_first" class="form-control mb-2" placeholder="Voornaam">
+            <input id="on_last" class="form-control mb-2" placeholder="Achternaam">
+            <button id="on_btn" class="btn btn-dark w-100 mb-2">Toon
+                resultaten</button>
+            <div id="on_out" class="alert alert-secondary mb-0">Wacht op input…</div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-danger text-white">
+            Hoofdstuk 10: document.write() (niet meer gebruiken)
+        </div>
+        <div class="card-body">
+            <button id="dw_btn" class="btn btn-danger w-100 mb-2">
+                document.write uitvoeren
+            </button>
+            <div id="dw_msg" class="alert alert-secondary mb-0">
+                Druk op de knop en let op de pagina…
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-warning text-dark">Mini-opdracht: oud vs
+            nieuw</div>
+        <div class="card-body">
+            <button id="ow_old" class="btn btn-outline-danger w-100 mb-2">Old way
+                ❌</button>
+            <button id="ow_new" class="btn btn-outline-success w-100 mb-2">Modern
+            </button>
+            <div id="ow_out" class="alert alert-secondary mb-0">
+                Wacht op een keuze…
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-info text-white">
+            Hoofdstuk 11: innerHTML vs textContent vs innerText
+        </div>
+        <div class="card-body">
+            <input id="ht_input" class="form-control mb-2" placeholder="Typ iets met
+<b>HTML</b>">
+            <button id="ht_btn_show" class="btn btn-info w-100 mb-3">
+                Toon resultaten
+            </button>
+            <div class="alert alert-secondary mb-2">textContent:</div>
+            <div id="ht_textContent" class="border p-2"></div>
+            <div class="alert alert-secondary mt-3 mb-2">innerText:</div>
+            <div id="ht_innerText" class="border p-2"></div>
+            <div class="alert alert-secondary mt-3 mb-2">innerHTML:</div>
+            <div id="ht_innerHTML" class="border p-2"></div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Veilige
+            output</div>
+        <div class="card-body">
+            <input id="safe_input" class="form-control mb-2" placeholder="Typ HTML
+code">
+            <button id="safe_btn" class="btn btn-dark w-100 mb-2">Veilig
+                tonen</button>
+            <div id="safe_output" class="alert alert-secondary mb-0">
+                Wacht op input…
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">
+            Hoofdstuk 12: DOM Selectors (oefening filteren op naam)
+        </div>
+        <div class="card-body">
+            <label class="form-label">Zoek een naam:</label>
+            <input id="sel_input" class="form-control mb-3" placeholder="bv. Tom">
+            <ul id="sel_list" class="list-group">
+                <li class="list-group-item naam-item">Tom</li>
+                <li class="list-group-item naam-item">Sara</li>
+                <li class="list-group-item naam-item">Liam</li>
+                <li class="list-group-item naam-item">Emma</li>
+                <li class="list-group-item naam-item">Noah</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht:
+            Kleurenswitcher</div>
+        <div class="card-body">
+            <button id="ks_red" class="btn btn-danger w-100 mb-2">Rood</button>
+            <button id="ks_blue" class="btn btn-primary w-100 mb-2">Blauw</button>
+            <button id="ks_green" class="btn btn-success w-100 mb-3">Groen</button>
+            <div class="d-flex gap-2">
+                <div class="kleur-box p-3 border flex-fill text-center">Box 1</div>
+                <div class="kleur-box p-3 border flex-fill text-center">Box 2</div>
+                <div class="kleur-box p-3 border flex-fill text-center">Box 3</div>
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-warning text-dark">
+            Hoofdstuk 13: DOM Focus & Children
+        </div>
+        <div class="card-body">
+            <label class="form-label">Naam:</label>
+            <input id="d13_name" class="form-control mb-2" placeholder="bv. Tom">
+            <label class="form-label">Email:</label>
+            58
+            Cursus Javascript in combo met Vite en Bootstrap – Auteur: Tom Vanhoutte
+            <input id="d13_email" class="form-control mb-3" placeholder="bv.
+tom@mail.be">
+            <button id="d13_focusName" class="btn btn-warning w-100 mb-2">Focus op
+                Naam</button>
+            <button id="d13_focusEmail" class="btn btn-dark w-100 mb-2">Focus op
+                Email</button>
+            <div class="mt-3 alert alert-secondary">
+                Totaal elementen in card-body: <span id="d13_count"></span>
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-info text-white">Mini-opdracht: Focus Game</div>
+        <div class="card-body" id="ft_body">
+            <input id="ft_input" class="form-control mb-2" placeholder="Klik
+start...">
+            <button id="ft_btn" class="btn btn-info w-100 mb-2">Start
+                oefening</button>
+            <div class="alert alert-secondary mb-0">
+                Kind elementen: <span id="ft_count">0</span>
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-success text-white">
+            Hoofdstuk 14: Klassen manipuleren
+        </div>
+        <div class="card-body">
+            <button id="cl_toggle" class="btn btn-success w-100 mb-3">
+                Toggle Highlight
+            </button>
+            <div class="d-flex gap-2">
+                <div class="cl-box p-3 border flex-fill text-center bg-light">Box
+                    1</div>
+                <div class="cl-box p-3 border flex-fill text-center bg-light">Box
+                    2</div>
+                <div class="cl-box p-3 border flex-fill text-center bg-light">Box
+                    3</div>
+            </div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Dark Mode
+            Toggle</div>
+        <div class="card-body">
+            <button id="dm2_btn" class="btn btn-dark w-100 mb-2">Dark mode
+                🌙</button>
+            <div id="dm2_status" class="alert alert-secondary mb-0">Light mode actief
+                ☀️</div>
+        </div>
+    </div>
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-primary text-white">
+            Hoofdstuk 15: Events & Formulieren
+        </div>
+        <div class="card-body">
+            <form id="ev_form">
+                <label class="form-label">Naam:</label>
+                <input id="ev_name" class="form-control mb-2" placeholder="bv. Tom">
+                <div id="ev_preview" class="alert alert-secondary mb-2">
+                    Wacht op input…
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                    Verzenden
+                </button>
+            </form>
+            <div id="ev_status" class="alert alert-secondary mt-3 mb-0">
+                Formulier niet verstuurd
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm mt-4">
+        <div class="card-header bg-dark text-white">Mini-opdracht: Email
+            checker</div>
+        <div class="card-body">
+            <form id="em_form">
+                <input id="em_input" class="form-control mb-2" placeholder="email">
+                <div id="em_preview" class="alert alert-secondary mb-2">Typ een
+                    email...</div>
+                <button type="submit" class="btn btn-dark w-100">Check email</button>
+            </form>
+            <div id="em_status" class="alert alert-secondary mt-3 mb-0">
+                Geen actie uitgevoerd
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>

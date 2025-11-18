@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smoke test</title>
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-secondary text-white">
+        Hoofdstuk 16: Event Types & preventDefault
+    </div>
+    <div class="card-body">
+        <a id="ev_link" href="https://google.com" class="d-block mb-2">
+            Link naar Google (wordt tegengehouden)
+        </a>
+        <div id="ev_box" class="p-4 text-center border mb-3 bg-light">
+            Hover over mij 🖱️
+        </div>
+        <form id="ev_form2">
+            <input id="ev_input2" class="form-control mb-2" placeholder="Naam">
+            <button class="btn btn-secondary w-100">Verzend (JS blokkeert)</button>
+        </form>
+        <div id="ev_msg2" class="alert alert-secondary mt-3 mb-0">
+            Wacht op interactie…
+        </div>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">
+        Mini-opdracht: Reaction Box
+    </div>
+    <div class="card-body">
+        <div id="rb_box" class="p-4 text-center border bg-light mb-3">
+            Hover / click mij
+        </div>
+        <div id="rb_msg" class="alert alert-secondary mb-0">
+            Wacht op interactie…
+        </div>
+    </div>
+</div>
+
+
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-success text-white">
+        Hoofdstuk 17: Todo App Mini-Project
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-end mb-2">
+            <span class="btn btn-secondary fs-mini">Open tasks: 0</span>
+        </div>
+        <form id="todo_form2" class="mb-3">
+            <input id="todo_input2" class="form-control mb-2" placeholder="Nieuwe taak">
+            <button class="btn btn-success w-100 mb-2" >Voeg toe</button>
+
+        </form>
+        <div id="todo_msg2" class="alert alert-secondary mb-3">
+            Voeg een taak toe om te beginnen
+        </div>
+        <div class="d-flex justify-content-between mb-2">
+            <div>
+                <button id="all" class="btn btn-outline-secondary me-1 fs-mini">Show all</button>
+                <button id="open" class="btn btn-outline-secondary me-1 fs-mini">Filter open</button>
+                <button id="done" class="btn btn-outline-secondary me-1 fs-mini">Filter done</button>
+            </div>
+            <div>
+                <button id="clear" class="btn btn-warning fs-mini">Clear done tasks</button>
+            </div>
+        </div>
+        <ul id="todo_list2" class="list-group"></ul>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-info text-white">
+        Hoofdstuk 18: Object & Date – Leeftijd Calculator
+    </div>
+    <div class="card-body">
+        <form id="age_form">
+            <label class="form-label">Geboortejaar:</label>
+            <input id="age_input" type="number" class="form-control mb-2"
+                   placeholder="bv. 1990">
+            <button class="btn btn-info w-100 mb-2">Bereken leeftijd</button>
+        </form>
+        <div id="age_output" class="alert alert-secondary mb-0">
+            Wacht op input…
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">Mini-opdracht:
+        Geboortedag</div>
+    <div class="card-body">
+        <div class="row g-2 mb-2">
+            <div class="col"><input id="dob_day" type="number" class="form-control"
+                                    placeholder="Dag"></div>
+            <div class="col"><input id="dob_month" type="number" class="form-control" placeholder="Maand"></div>
+            <div class="col"><input id="dob_year" type="number" class="form-control" placeholder="Jaar"></div>
+        </div>
+        <button id="dob_btn" class="btn btn-dark w-100 mb-2">Bereken</button>
+        <div id="dob_out" class="alert alert-secondary mb-0">Wacht op
+            input…</div>
+    </div>
+</div>
+
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        Hoofdstuk 19: Object Constructors
+    </div>
+    <div class="card-body">
+        <input id="uc_name" class="form-control mb-2" placeholder="Naam">
+        <input id="uc_age" type="number" class="form-control mb-2"
+               placeholder="Leeftijd">
+        <button id="uc_btn" class="btn btn-primary w-100 mb-3">Maak
+            gebruiker</button>
+        <ul id="uc_list" class="list-group"></ul>
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">
+        Mini-opdracht: Product Factory
+    </div>
+    <div class="card-body">
+        <input id="prod_name" class="form-control mb-2"
+               placeholder="Productnaam">
+        <input id="prod_price" type="number" class="form-control mb-2"
+               placeholder="Prijs">
+        <button id="prod_btn" class="btn btn-dark w-100 mb-3">Voeg product
+            toe</button>
+        <ul id="prod_list" class="list-group"></ul>
+    </div>
+</div>
+
+</body>
+</html>

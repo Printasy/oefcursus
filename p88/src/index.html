@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Smoke test</title>
+    <script type="module" src="./js/main.js"></script>
+</head>
+<body>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-secondary text-white">
+        Hoofdstuk 20: ES6 Classes Demo
+    </div>
+    <div class="card-body">
+        <input id="cls_name" class="form-control mb-2" placeholder="Naam">
+        <input id="cls_age" type="number" class="form-control mb-2"
+               placeholder="Leeftijd">
+        <select id="cls_role" class="form-select mb-3">
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+        </select>
+        <button id="cls_btn" class="btn btn-secondary w-100 mb-3">Maak
+            gebruiker</button>
+        <ul id="cls_list" class="list-group"></ul>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-secondary text-white">
+        Mini-opdracht: Dieren (ES6 Classes)
+    </div>
+    <div class="card-body">
+        <input id="pet_name" class="form-control mb-2" placeholder="Naam">
+        <select id="pet_type" class="form-select mb-3">
+            <option value="hond">Hond</option>
+            <option value="kat">Kat</option>
+        </select>
+        <button id="pet_btn" class="btn btn-secondary w-100 mb-3">Voeg dier toe</button>
+        <ul id="pet_list" class="list-group"></ul>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-success text-white d-flex justify-contentbetween align-items-center">
+        Webshop Producten
+        <span class="badge bg-warning text-dark" id="cart_count">0</span>
+    </div>
+    <div class="card-body" id="prod_container"></div>
+</div>
+<div id="cart_msg" class="alert alert-secondary mt-2 mb-0">
+    Voeg een product toe aan je winkelmandje
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">
+        Hoofdstuk 22: Browser Object Model
+    </div>
+    <div class="card-body">
+        <button id="bom_btn" class="btn btn-dark w-100 mb-3">Toon browser
+            info</button>
+        <ul id="bom_list" class="list-group mb-3"></ul>
+        <button id="bom_go" class="btn btn-warning w-100">Ga naar Google</button>
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-info text-white">Mini-opdracht: Device
+        Check</div>
+    <div class="card-body">
+        <button id="dc_btn" class="btn btn-info w-100 mb-3">Check device</button>
+        <ul id="dc_list" class="list-group"></ul>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        Hoofdstuk 23: LocalStorage
+    </div>
+    <div class="card-body">
+        <input id="ls_name" class="form-control mb-2" placeholder="Naam">
+        <button id="ls_save" class="btn btn-primary w-100 mb-2">Opslaan</button>
+        <div id="ls_output" class="alert alert-secondary mb-0">
+            Geen naam opgeslagen
+        </div>
+    </div>
+</div>
+
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">Favorietenlijst</div>
+    <div class="card-body">
+        <input id="fav_input" class="form-control mb-2" placeholder="Voeg
+favoriet toe">
+        <button id="fav_btn" class="btn btn-dark w-100 mb-3">Toevoegen</button>
+        <ul id="fav_list" class="list-group mb-2"></ul>
+        <button id="fav_clear" class="btn btn-outline-danger w100">Wissen</button>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        Hoofdstuk 24: Dark Mode Toggle
+    </div>
+    <div class="card-body">
+
+        <button id="theme_btn" class="btn btn-primary w-100 mb-2">
+            Toggle Dark Mode
+        </button>
+
+        <div id="theme_status" class="alert alert-secondary mb-0">
+            Huidig thema: light
+        </div>
+
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">
+        Hoofdstuk 24: Fetch API Demo
+    </div>
+    <div class="card-body">
+        <button id="api_btn" class="btn btn-primary w-100 mb-3">Laad
+            gebruikers</button>
+        <ul id="api_list" class="list-group mb-2"></ul>
+        <div id="api_status" class="alert alert-secondary mb-0">
+            Klik op de knop om data te laden
+        </div>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-info text-white">
+        Hoofdstuk 25: Lokale JSON laden
+    </div>
+    <div class="card-body">
+        <button id="json_btn" class="btn btn-info w-100 mb-3">
+            Laad lokale gebruikers
+        </button>
+        <ul id="json_list" class="list-group mb-2"></ul>
+        <div id="json_status" class="alert alert-secondary mb-0">
+            Wacht op actie…
+        </div>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">Lokale Producten</div>
+    <div class="card-body">
+        <button id="prod_load_btn" class="btn btn-dark w-100 mb-3">Laad
+            producten</button>
+        <ul id="prod_list_local" class="list-group mb-2"></ul>
+        <div id="prod_status_local" class="alert alert-secondary mb-0">
+            Wacht op actie…
+        </div>
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-info text-white">
+        Hoofdstuk 31: Meerdere API calls + Skeleton UI
+    </div>
+    <div class="card-body">
+        <button id="multi_btn" class="btn btn-info w-100 mb-3">
+            Laad gebruiker + posts
+        </button>
+        <div id="multi_output"></div>
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-info text-white">
+        Hoofdstuk 31: Dit is wat skeleton UI dient voor te stellen.
+    </div>
+    <div class = "m-3">
+        <div class="mb-2 skeleton" style="height: 25px; width: 60%;"></div>
+        <div class="mb-2 skeleton" style="height: 18px; width: 90%;"></div>
+        <div class="mb-2 skeleton" style="height: 18px; width: 80%;"></div>
+        <div class="mb-2 skeleton" style="height: 18px; width: 70%;"></div>
+
+    </div>
+</div>
+
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-dark text-white">Hoofdstuk 34: Console
+        Tools</div>
+    <div class="card-body">
+        <button id="dbg_console_btn" class="btn btn-dark w-100 mb-2">Genereer
+            logs</button>
+        <div id="dbg_console_out" class="alert alert-secondary mb-0">Open
+            DevTools → Console</div>
+    </div>
+</div>
+<div class="card shadow-sm mt-4">
+    <div class="card-header bg-primary text-white">Breakpoints & Watch</div>
+    <div class="card-body">
+        <input id="dbg_sum_inp" type="number" class="form-control mb-2"
+               placeholder="Geef een getal">
+        <button id="dbg_sum_btn" class="btn btn-primary w-100 mb-2">Bereken som
+            1..N</button>
+        <div id="dbg_sum_out" class="alert alert-secondary mb-0">Nog niets
+            berekend</div>
+    </div>
+</div>
+</body>
+</html>
